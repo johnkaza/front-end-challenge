@@ -29,12 +29,13 @@ Your goal is to create a minimalist [**Steam Store**](https://store.steampowered
 - [ ] Replace `Results exclude some products based on your preferences` by an `input` to `filter` games on each tab
 - [ ] Display all data retrieved by the `API` as the example image above
 
-> Data from API:
+    > Data from API:
 
-| Game Image | Compatible OS | Tags | Price |
-|------------|---------------|------|-------|
+    | Game Image | Compatible OS | Tags | Price |
+    |------------|---------------|------|-------|
 
 #### 2. Game information page
+Once the user clicks in a game from the game list redirects to this page
 
 > As displayed in [`/app/413150`](https://store.steampowered.com/app/413150).
 
