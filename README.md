@@ -2,9 +2,9 @@
 
 ## Description
 
-Welcome to the [**Hack The Box**](http://hackthebox.eu) front-end challenge! 
+> Welcome to the [**Hack The Box**](http://hackthebox.eu) front-end challenge! 
 
-> Your goal is to create a minimalist [**Steam Store**](https://store.steampowered.com/) platform clone following the specifications and requirements down below.
+Your goal is to create a minimalist [**Steam Store**](https://store.steampowered.com/) platform clone following the specifications and requirements down below.
 
 ## Specifications and requirements.
 
