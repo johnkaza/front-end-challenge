@@ -24,7 +24,7 @@ Your goal is to create a minimalist [**Steam Store**](https://store.steampowered
 ![](https://raw.githubusercontent.com/htb-interview/front-end-challenge/master/images/tabs-game-list.png)
 > As they're displayed in [`/games`](https://store.steampowered.com/games/)
 
-##### To do:
+##### - To do:
 - [ ] List 10 games for each tab `pagination is not required`
 - [ ] Replace `Results exclude some products based on your preferences` by a `input` to filter games on list
 
