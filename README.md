@@ -11,8 +11,7 @@ Your goal is to create a minimalist [**Steam Store**](https://store.steampowered
 - The project must be a `Single Page Application`
 - Pick your best framework. Such as `Angular`, `React` or `Vue`
 - Use [**Steam**](https://store.steampowered.com) store public API. ([Web API Overview](https://partner.steamgames.com/doc/webapi_overview))
-- `Responsive CSS` is a bonus
-- Free to use any CSS framework or do it by yourself
+- `Responsive CSS` is a bonus. You're free to pick any CSS framework if you'd like to
 - Follow **Steam** color scheme is a bonus
 
 ## Features
