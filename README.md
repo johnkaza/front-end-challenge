@@ -40,7 +40,7 @@ Once the user clicks in a game from the game list redirects to this page
 > As displayed in [`/app/413150`](https://store.steampowered.com/app/413150).
 
 ##### :bookmark_tabs: To do:
-- [ ] Add a way to get back to games list
+- [ ] Add a button to get back to the games list
 - [ ] Display data retrieved by `API` as the example image above
 
     |  Game Name  | Game Image | Game Description | Recent Reviews | All Reviews | Developer | Publisher |
@@ -53,4 +53,4 @@ Once the user clicks in a game from the game list redirects to this page
 
 - Fork this repository
 - Create your project inside `app` directory
-- When you're done make a `pull request` from your `fork` to this `repository`
+- Make a `pull request` from your `fork` to this `repository` when you're done
