@@ -57,8 +57,8 @@ Once the user clicks in a game from the game list redirects to this page
 - Make a `pull request` from your `fork` to this `repository` when you're done
 
 ## Tips
-
-Search for **Steam** on [`Dribbble`](https://dribbble.com) for some inspiration
+- Make the repetitive pieces of your project as `components` :smiley:
+- Search for **Steam** on [`Dribbble`](https://dribbble.com) for some inspiration
 
 ## Notes
 
