@@ -27,9 +27,7 @@ Your goal is to create a minimalist [**Steam Store**](https://store.steampowered
 ##### :bookmark_tabs: To do:
 - [ ] List 10 games for each tab *(pagination is not required)*
 - [ ] Replace `Results exclude some products based on your preferences` by an `input` to `filter` games on each tab
-- [ ] Display all data retrieved by the `API` as the example image above
-
-    > Data from API:
+- [ ] Display data retrieved by `API` as the example image above
 
     | Game Image | Compatible OS | Tags | Discount | Price |
     |------------|---------------|------|----------|-------|
