@@ -16,7 +16,14 @@ Your goal is to create a minimalist [**Steam Store**](https://store.steampowered
 
 ## Features
 
-- List **New and Trending**, **Top Sellers**, **What's Being Played** and **Upcoming** `tabs` from [`/games`](https://store.steampowered.com/games/)
+#### Have a list of games for each tab below
+ - **New and Trending**
+ - **Top Sellers**
+ - **What's Being Played**
+ - **Upcoming**
+ 
+As they're displayed in [`/games`](https://store.steampowered.com/games/)
+
 - Game information page. [`Stardew Valley`](https://store.steampowered.com/app/413150) example.
 
 ## How to start?
