@@ -35,7 +35,19 @@ Your goal is to create a minimalist [**Steam Store**](https://store.steampowered
 #### 2. Game information page
 Once the user clicks in a game from the game list redirects to this page
 
+##### :bulb: Example:
+![](https://raw.githubusercontent.com/htb-interview/front-end-challenge/master/images/game-information-page.png)
 > As displayed in [`/app/413150`](https://store.steampowered.com/app/413150).
+
+##### :bookmark_tabs: To do:
+- [ ] Add a way to get back to games list
+- [ ] Display data retrieved by `API` as the example image above
+
+    |  Game Name  | Game Image | Game Description | Recent Reviews | All Reviews | Developer | Publisher |
+    |-------------|---------------|-------------------|-------------|-----------|------------|-----------|
+    
+    | Discount | Price | "Is this game relevant to you?" | Languages | About this Game |
+    |----------|-------|---------------------------------|-----------|-----------------|
 
 ## How to start?
 
