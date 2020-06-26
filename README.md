@@ -36,7 +36,7 @@ Your goal is to create a minimalist [**Steam Store**](https://store.steampowered
 
 #### 2. Game information page
 
-- Game information page. [`Stardew Valley`](https://store.steampowered.com/app/413150) example.
+> As they're displayed in [`/app/413150`](https://store.steampowered.com/app/413150).
 
 ## How to start?
 
