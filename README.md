@@ -16,13 +16,19 @@ Your goal is to create a minimalist [**Steam Store**](https://store.steampowered
 
 ## Features
 
-#### Have a list of games for each tab below
- - **New and Trending**
- - **Top Sellers**
- - **What's Being Played**
- - **Upcoming**
+#### 1. Have a list of games for each tab
+| New and Trending | Top Sellers | What's Being Played | Upcoming |
+|------------------|-------------|---------------------|----------|
+
+
+- [ ] 10 games for eac
  
-As they're displayed in [`/games`](https://store.steampowered.com/games/)
+> As they're displayed in [`/games`](https://store.steampowered.com/games/)
+
+##### Example:
+![](https://raw.githubusercontent.com/htb-interview/front-end-challenge/master/images/tabs-game-list.png)
+
+#### 2. 
 
 - Game information page. [`Stardew Valley`](https://store.steampowered.com/app/413150) example.
 
