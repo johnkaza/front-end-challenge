@@ -54,3 +54,11 @@ Once the user clicks in a game from the game list redirects to this page
 - Fork this repository
 - Create your project inside `app` directory
 - Make a `pull request` from your `fork` to this `repository` when you're done
+
+## Tips
+
+Search for **Steam** on [`Dribbble`](https://dribbble.com) for some inspiration
+
+> We are not affiliated with Valve Corporation or Steam in any way, shape, form, or fashion. 
+
+**Copyright © Hack The Box 2020**
