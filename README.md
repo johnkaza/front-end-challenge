@@ -41,6 +41,7 @@ Once the user clicks in a game from the game list redirects to this page
 
 ##### :bookmark_tabs: To do:
 - [ ] Add a button to get back to the games list
+- [ ] Add a slider with game images and/or videos (bonus)
 - [ ] Display data retrieved by `API` as the example image above
 
     |  Game Name  | Game Image | Game Description | Recent Reviews | All Reviews | Developer | Publisher |
