@@ -11,8 +11,8 @@ Your goal is to create a minimalist [**Steam Store**](https://store.steampowered
 - The project must be a `Single Page Application`
 - Pick your best framework. Such as `Angular`, `React` or `Vue`
 - Use [**Steam**](https://store.steampowered.com) store public API. ([Web API Overview](https://partner.steamgames.com/doc/webapi_overview))
-- `Responsive CSS` is a bonus. You're free to pick any CSS framework if you'd like to
-- Follow **Steam** color scheme is a bonus
+- `Responsive CSS` is a bonus. You're free to pick any CSS framework you'd like to
+- Follow **Steam** color scheme or very similar is a bonus
 
 ## Features
 
@@ -20,15 +20,21 @@ Your goal is to create a minimalist [**Steam Store**](https://store.steampowered
 | New and Trending | Top Sellers | What's Being Played | Upcoming |
 |------------------|-------------|---------------------|----------|
 
-##### Example:
+##### :bulb: Example:
 ![](https://raw.githubusercontent.com/htb-interview/front-end-challenge/master/images/tabs-game-list.png)
 > As they're displayed in [`/games`](https://store.steampowered.com/games/)
 
-##### - To do:
-- [ ] List 10 games for each tab `pagination is not required`
-- [ ] Replace `Results exclude some products based on your preferences` by a `input` to filter games on list
+##### :bookmark_tabs: To do:
+- [ ] List 10 games for each tab *(pagination is not required)*
+- [ ] Replace `Results exclude some products based on your preferences` by an `input` to `filter` games on each tab
+- [ ] Display all data retrieved by the `API` as the example image above
 
-#### 2. 
+> Data from API:
+
+| Game Image | Compatible OS | Tags | Price |
+|------------|---------------|------|-------|
+
+#### 2. Game information page
 
 - Game information page. [`Stardew Valley`](https://store.steampowered.com/app/413150) example.
 
