@@ -1,4 +1,4 @@
-<p align="center"><img src="https://raw.githubusercontent.com/silofy/hackthebox/master/static/hero.png"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/htb-skill-test/frontend/master/images/front-end-challenge.png"></p>
 
 ## Description
 
