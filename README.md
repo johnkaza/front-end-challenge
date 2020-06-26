@@ -2,13 +2,18 @@
 
 ## Description
 
-The front-end challenge is to create a minimalist [**Steam Store**](https://store.steampowered.com/) platform clone following the specifications and requirements down below.
+Welcome to the [**Hack The Box**](http://hackthebox.eu) front-end challenge! 
+
+| Your goal is to create a minimalist [**Steam Store**](https://store.steampowered.com/) platform clone following the specifications and requirements down below.
 
 ## Specifications and requirements.
 
 - The project must be a `Single Page Application`
 - Pick your best framework. Such as `Angular`, `React` or `Vue`
 - Use [**Steam**](https://store.steampowered.com) store public API. ([Web API Overview](https://partner.steamgames.com/doc/webapi_overview))
+- `Responsive CSS` is a bonus
+- Free to use any CSS framework or do it by yourself
+- Follow **Steam** color scheme is a bonus
 
 ## Features
 
