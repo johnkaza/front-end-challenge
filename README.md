@@ -31,8 +31,8 @@ Your goal is to create a minimalist [**Steam Store**](https://store.steampowered
 
     > Data from API:
 
-    | Game Image | Compatible OS | Tags | Price |
-    |------------|---------------|------|-------|
+    | Game Image | Compatible OS | Tags | Discount | Price |
+    |------------|---------------|------|----------|-------|
 
 #### 2. Game information page
 Once the user clicks in a game from the game list redirects to this page
