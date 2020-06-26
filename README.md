@@ -59,6 +59,8 @@ Once the user clicks in a game from the game list redirects to this page
 
 Search for **Steam** on [`Dribbble`](https://dribbble.com) for some inspiration
 
+## Notes
+
 > We are not affiliated with Valve Corporation or Steam in any way, shape, form, or fashion. 
 
 **Copyright © Hack The Box 2020**
