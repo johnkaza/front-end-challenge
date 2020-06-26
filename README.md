@@ -16,7 +16,7 @@ Your goal is to create a minimalist [**Steam Store**](https://store.steampowered
 
 ## Features
 
-#### 1. Have a list of games for each tab
+#### 1. List of games for each tab
 | New and Trending | Top Sellers | What's Being Played | Upcoming |
 |------------------|-------------|---------------------|----------|
 
