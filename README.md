@@ -20,8 +20,8 @@ Your goal is to create a minimalist [**Steam Store**](https://store.steampowered
 | New and Trending | Top Sellers | What's Being Played | Upcoming |
 |------------------|-------------|---------------------|----------|
 
-
-- [ ] 10 games for eac
+- To do:
+- [ ] List 10 games for each tab `pagination is not required`
  
 > As they're displayed in [`/games`](https://store.steampowered.com/games/)
 
