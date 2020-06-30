@@ -28,8 +28,6 @@ export class GamesList extends Component {
   render() {
     const { list } = this.props;
 
-    console.log(list, 'list');
-
     return (
       <div css={container}>
         {list?.map((val, key) => {
@@ -61,7 +59,7 @@ export class GamesList extends Component {
                 </div>
               )}
               <div className="price">
-                <Price total={'39$'} discountPrice={'39$'} />
+                <Price currentPrice={39} discountedPrice={45} currency="€" />
               </div>
             </div>
           );

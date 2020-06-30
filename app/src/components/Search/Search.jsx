@@ -3,11 +3,11 @@ import { container } from './styles.js';
 
 export class Search extends Component {
   render() {
-    const { topSellers, newTrending, beingPlayed, upComing } = this.state;
+    const { onSearch } = this.props;
 
     return (
       <div css={container}>
-        <input class="search-input" type="text" onChange={} />
+        <input className="search-input" placeholder="Search..." type="text" onChange={onSearch} />
       </div>
     );
   }

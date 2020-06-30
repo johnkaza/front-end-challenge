@@ -3,10 +3,17 @@ import { container } from './styles.js';
 
 export class Price extends Component {
   render() {
+    const { currentPrice, discountedPrice, currency } = this.props;
     return (
       <div css={container}>
-        <div className="discounted-price">40$</div>
-        <div className="current-price">35$</div>
+        <div className="discounted-price">
+          {discountedPrice}
+          {currency}
+        </div>
+        <div className="current-price">
+          {currentPrice}
+          {currency}
+        </div>
       </div>
     );
   }

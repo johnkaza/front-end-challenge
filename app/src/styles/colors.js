@@ -8,4 +8,7 @@ export default {
   fernFrond: '#4C6B22',
   citrus: '#A4D007',
   black: 'black',
+  midGray: '#626366',
+  regentGray: '#9099A1',
+  calypso: '#316282',
 };

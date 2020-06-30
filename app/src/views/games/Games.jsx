@@ -3,12 +3,19 @@ import App from '../../App';
 import { Container, Tabs, Tab } from 'react-bootstrap';
 import { getData } from './_actions';
 import GamesList from './components/GamesList';
-import { TabsContainer } from './styles';
+import { TabsContainer, searchContainer } from './styles';
+import { Search } from '@/components';
 
 import { DATA } from '@/api/data';
 
 class Games extends React.Component {
   state = {
+    defaultValues: {
+      topRated: [],
+      newTrending: [],
+      beingPlayed: [],
+      upComing: [],
+    },
     topRated: [],
     newTrending: [],
     beingPlayed: [],
@@ -16,7 +23,25 @@ class Games extends React.Component {
   };
 
   componentDidMount() {
-    this.getData();
+    // this.getData();
+
+    const games = DATA?.applist?.apps;
+
+    console.log(games);
+
+    this.setState({
+      ...this.state,
+      defaultValues: {
+        topSellers: games.slice(0, 10),
+        newTrending: games.slice(10, 20),
+        beingPlayed: games.slice(20, 30),
+        upComing: games.slice(30, 40),
+      },
+      topSellers: games.slice(0, 10),
+      newTrending: games.slice(10, 20),
+      beingPlayed: games.slice(20, 30),
+      upComing: games.slice(30, 40),
+    });
   }
 
   getData = async () => {
@@ -30,12 +55,9 @@ class Games extends React.Component {
       maxbroadcasts: 12,
     });
 
-    console.log(response, 'response');
     const games = DATA?.applist?.apps;
 
     if (response && games) {
-      console.log(games);
-
       this.setState({
         ...this.state,
         topSellers: games.slice(0, 10),
@@ -44,6 +66,20 @@ class Games extends React.Component {
         upComing: games.slice(30, 40),
       });
     }
+  };
+
+  searchGames = (listName, list, event) => {
+    const text = event.target.value;
+    const defaultValuesList = this.state.defaultValues;
+
+    const newList = defaultValuesList[listName].filter((str) =>
+      str.name.toLowerCase().includes(text)
+    );
+
+    this.setState({
+      ...this.state,
+      [listName]: newList,
+    });
   };
 
   render() {
@@ -55,15 +91,27 @@ class Games extends React.Component {
         <Container>
           <Tabs css={TabsContainer} defaultActiveKey="new-trending">
             <Tab eventKey="new-trending" title="New and Trending">
+              <div css={searchContainer}>
+                <Search onSearch={(text) => this.searchGames('newTrending', topSellers, text)} />
+              </div>
               <GamesList list={newTrending} />
             </Tab>
             <Tab eventKey="top-sellers" title="Top Sellers">
+              <div css={searchContainer}>
+                <Search onSearch={(text) => this.searchGames('topSellers', topSellers, text)} />
+              </div>
               <GamesList list={topSellers} />
             </Tab>
             <Tab eventKey="played" title="What's Being Played">
+              <div css={searchContainer}>
+                <Search onSearch={(text) => this.searchGames('beingPlayed', topSellers, text)} />
+              </div>
               <GamesList list={beingPlayed} />
             </Tab>
             <Tab eventKey="upcoming" title="Upcoming">
+              <div css={searchContainer}>
+                <Search onSearch={(text) => this.searchGames('upComing', topSellers, text)} />
+              </div>
               <GamesList list={upComing} />
             </Tab>
           </Tabs>
