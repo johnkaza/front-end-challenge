@@ -2,6 +2,7 @@ import { css } from '@emotion/core';
 import colors from '@/styles/colors';
 import { font } from '@/styles/typography';
 import { rgba } from '@/styles/helpers';
+import { mq } from '@/styles/breakpoints';
 
 export const container = css`
   margin-top: 16px;
@@ -9,9 +10,15 @@ export const container = css`
 
 export const listItemContainer = css`
   color: white;
-  height: 69px;
   background-color: ${rgba(colors.black, 0.2)};
   cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+
+  ${mq('xs')} {
+    height: 69px;
+  }
 
   &:hover {
     background-color: ${rgba(colors.black, 0.4)};
@@ -23,7 +30,15 @@ export const listItemContainer = css`
 
   .avatar {
     display: inline-block;
-    max-width: 184px;
+    max-width: 100px;
+
+    ${mq('xxs')} {
+      max-width: 110px;
+    }
+
+    ${mq('sm')} {
+      max-width: 184px;
+    }
 
     > img {
       vertical-align: baseline;
@@ -31,11 +46,23 @@ export const listItemContainer = css`
   }
 
   .info {
-    max-width: 280px;
+    max-width: 100px;
     width: 100%;
-    margin-left: 16px;
     vertical-align: top;
     height: 100%;
+    margin-left: 8px;
+
+    ${mq('xxs')} {
+      max-width: calc(100% - 184px);
+    }
+
+    ${mq('xs')} {
+      margin-left: 16px;
+    }
+
+    ${mq('sm')} {
+      max-width: 280px;
+    }
   }
 
   .title {
@@ -59,6 +86,15 @@ export const listItemContainer = css`
 
   .discount {
     margin-left: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 25px;
+
+    ${mq('sm')} {
+      position: static;
+      height: 100%;
+    }
   }
 
   .tags {
@@ -76,7 +112,15 @@ export const listItemContainer = css`
 
   .price {
     margin-left: 40px;
-    height: 100%;
+    height: 40px;
+    position: absolute;
+    right: 8px;
+    top: 26px;
+
+    ${mq('sm')} {
+      height: 100%;
+      position: static;
+    }
   }
 
   .info,

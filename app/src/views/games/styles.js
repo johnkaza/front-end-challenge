@@ -27,6 +27,11 @@ export const TabsContainer = css`
   border-bottom: 3px solid ${colors.cello};
 `;
 
+export const TabsWrapper = css`
+  max-width: 616px;
+  margin: 0 auto;
+`;
+
 export const searchContainer = css`
   margin-top: 16px;
 `;

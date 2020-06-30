@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { container } from './styles.js';
 
-export class Search extends Component {
+interface SearchProps {
+  onSearch: () => void;
+}
+
+export class Search extends Component<SearchProps> {
   render() {
     const { onSearch } = this.props;
 

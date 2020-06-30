@@ -3,7 +3,7 @@ import App from '../../App';
 import { Container, Tabs, Tab } from 'react-bootstrap';
 import { getData } from './_actions';
 import GamesList from './components/GamesList';
-import { TabsContainer, searchContainer } from './styles';
+import { TabsContainer, searchContainer, TabsWrapper } from './styles';
 import { Search } from '@/components';
 
 import { DATA } from '@/api/data';
@@ -89,32 +89,34 @@ class Games extends React.Component {
     return (
       <App>
         <Container>
-          <Tabs css={TabsContainer} defaultActiveKey="new-trending">
-            <Tab eventKey="new-trending" title="New and Trending">
-              <div css={searchContainer}>
-                <Search onSearch={(text) => this.searchGames('newTrending', topSellers, text)} />
-              </div>
-              <GamesList list={newTrending} />
-            </Tab>
-            <Tab eventKey="top-sellers" title="Top Sellers">
-              <div css={searchContainer}>
-                <Search onSearch={(text) => this.searchGames('topSellers', topSellers, text)} />
-              </div>
-              <GamesList list={topSellers} />
-            </Tab>
-            <Tab eventKey="played" title="What's Being Played">
-              <div css={searchContainer}>
-                <Search onSearch={(text) => this.searchGames('beingPlayed', topSellers, text)} />
-              </div>
-              <GamesList list={beingPlayed} />
-            </Tab>
-            <Tab eventKey="upcoming" title="Upcoming">
-              <div css={searchContainer}>
-                <Search onSearch={(text) => this.searchGames('upComing', topSellers, text)} />
-              </div>
-              <GamesList list={upComing} />
-            </Tab>
-          </Tabs>
+          <div css={TabsWrapper}>
+            <Tabs css={TabsContainer} defaultActiveKey="new-trending">
+              <Tab eventKey="new-trending" title="New and Trending">
+                <div css={searchContainer}>
+                  <Search onSearch={(text) => this.searchGames('newTrending', topSellers, text)} />
+                </div>
+                <GamesList list={newTrending} />
+              </Tab>
+              <Tab eventKey="top-sellers" title="Top Sellers">
+                <div css={searchContainer}>
+                  <Search onSearch={(text) => this.searchGames('topSellers', topSellers, text)} />
+                </div>
+                <GamesList list={topSellers} />
+              </Tab>
+              <Tab eventKey="played" title="What's Being Played">
+                <div css={searchContainer}>
+                  <Search onSearch={(text) => this.searchGames('beingPlayed', topSellers, text)} />
+                </div>
+                <GamesList list={beingPlayed} />
+              </Tab>
+              <Tab eventKey="upcoming" title="Upcoming">
+                <div css={searchContainer}>
+                  <Search onSearch={(text) => this.searchGames('upComing', topSellers, text)} />
+                </div>
+                <GamesList list={upComing} />
+              </Tab>
+            </Tabs>
+          </div>
         </Container>
       </App>
     );

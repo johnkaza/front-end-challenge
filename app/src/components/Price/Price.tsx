@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { container } from './styles.js';
 
-export class Price extends Component {
+interface PriceProps {
+  currentPrice: number;
+  discountedPrice: number;
+  currency: string;
+}
+
+export class Price extends Component<PriceProps> {
   render() {
     const { currentPrice, discountedPrice, currency } = this.props;
     return (
