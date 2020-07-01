@@ -33,8 +33,6 @@ interface GamesListProps {
   list: Array<{ name?: string | undefined; appid?: number | undefined }>;
 }
 
-const discountPrice = true;
-
 export class GamesList extends Component<GamesListProps> {
   state: GameProps = {
     gamesList: [],
