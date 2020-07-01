@@ -1,22 +1,40 @@
 import React from 'react';
-import App from '../../App';
 import { Container, Tabs, Tab } from 'react-bootstrap';
-import { getData } from './_actions';
+import App from '@/App';
 import GamesList from './components/GamesList';
-import { TabsContainer, searchContainer, TabsWrapper } from './styles';
 import { Search } from '@/components';
+import { TabsContainer, searchContainer, TabsWrapper } from './styles';
+import { getData } from './_actions';
 
 import { DATA } from '@/api/data';
 
+interface ListItemProp {
+  name?: string | undefined;
+  appid?: number | undefined;
+}
+
+interface IState {
+  readonly defaultValues: {
+    topSellers: Array<ListItemProp>;
+    newTrending: Array<ListItemProp>;
+    beingPlayed: Array<ListItemProp>;
+    upComing: Array<ListItemProp>;
+  };
+  topSellers: Array<ListItemProp>;
+  newTrending: Array<ListItemProp>;
+  beingPlayed: Array<ListItemProp>;
+  upComing: Array<ListItemProp>;
+}
+
 class Games extends React.Component {
-  state = {
+  state: IState = {
     defaultValues: {
-      topRated: [],
+      topSellers: [{}],
       newTrending: [],
       beingPlayed: [],
       upComing: [],
     },
-    topRated: [],
+    topSellers: [],
     newTrending: [],
     beingPlayed: [],
     upComing: [],
@@ -26,8 +44,6 @@ class Games extends React.Component {
     // this.getData();
 
     const games = DATA?.applist?.apps;
-
-    console.log(games);
 
     this.setState({
       ...this.state,
@@ -68,7 +84,7 @@ class Games extends React.Component {
     }
   };
 
-  searchGames = (listName, list, event) => {
+  searchGames = (listName, event) => {
     const text = event.target.value;
     const defaultValuesList = this.state.defaultValues;
 
@@ -83,35 +99,34 @@ class Games extends React.Component {
   };
 
   render() {
-    console.log(this.state, 'state');
     const { topSellers, newTrending, beingPlayed, upComing } = this.state;
 
     return (
       <App>
         <Container>
           <div css={TabsWrapper}>
-            <Tabs css={TabsContainer} defaultActiveKey="new-trending">
+            <Tabs id="games-tabs" css={TabsContainer} defaultActiveKey="new-trending">
               <Tab eventKey="new-trending" title="New and Trending">
                 <div css={searchContainer}>
-                  <Search onSearch={(text) => this.searchGames('newTrending', topSellers, text)} />
+                  <Search onSearch={(text: string) => this.searchGames('newTrending', text)} />
                 </div>
                 <GamesList list={newTrending} />
               </Tab>
               <Tab eventKey="top-sellers" title="Top Sellers">
                 <div css={searchContainer}>
-                  <Search onSearch={(text) => this.searchGames('topSellers', topSellers, text)} />
+                  <Search onSearch={(text: string) => this.searchGames('topSellers', text)} />
                 </div>
                 <GamesList list={topSellers} />
               </Tab>
               <Tab eventKey="played" title="What's Being Played">
                 <div css={searchContainer}>
-                  <Search onSearch={(text) => this.searchGames('beingPlayed', topSellers, text)} />
+                  <Search onSearch={(text: string) => this.searchGames('beingPlayed', text)} />
                 </div>
                 <GamesList list={beingPlayed} />
               </Tab>
               <Tab eventKey="upcoming" title="Upcoming">
                 <div css={searchContainer}>
-                  <Search onSearch={(text) => this.searchGames('upComing', topSellers, text)} />
+                  <Search onSearch={(text: string) => this.searchGames('upComing', text)} />
                 </div>
                 <GamesList list={upComing} />
               </Tab>

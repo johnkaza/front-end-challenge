@@ -10,6 +10,8 @@ export const container = css`
   padding: 4px 8px;
 
   .search-input {
+    height: 24px;
+    vertical-align: top;
     border: none;
     background-color: transparent;
     color: ${colors.white};

@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Assignment for HackTheBox",
   "main": "index.js",
-  "proxy": "http://api.steampowered.com",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack/webpack.dev.js --mode development --open --hot",
     "build": "webpack --config ./webpack/webpack.prod.js --mode production"

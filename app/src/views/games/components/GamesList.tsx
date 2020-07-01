@@ -4,6 +4,10 @@ import { platformIcons } from '@/images';
 
 import { Discount, Price } from '@/components';
 
+interface SearchProps {
+  list: Array<{ name?: string | undefined; appid?: number | undefined }>;
+}
+
 const PLATFORMS = [
   { src: platformIcons.mac },
   { src: platformIcons.linux },
@@ -24,7 +28,7 @@ const TAGS = [
 
 const discountPrice = true;
 
-export class GamesList extends Component {
+export class GamesList extends Component<SearchProps> {
   render() {
     const { list } = this.props;
 

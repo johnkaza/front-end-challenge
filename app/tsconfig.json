@@ -1,10 +1,25 @@
 {
   "compilerOptions": {
     "sourceMap": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "module": "commonjs",
+    "moduleResolution": "node",
     "target": "es5",
-    "jsx": "react"
+    "jsx": "react",
+    "esModuleInterop": true,
+    "types": ["@emotion/core"],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/components": ["./src/components"],
+      "@/components/*": ["./src/components/*"],
+      "@/images": ["./src/images"],
+      "@/styles": ["./src/styles"],
+      "@/api": ["./src/api"],
+      "@/utils": ["./src/utils"]
+    },
+    "lib": ["es6", "dom", "esnext"]
   },
+  "exclude": ["node_modules", "dist", "webpack"],
   "include": ["./src/**/*"]
 }
