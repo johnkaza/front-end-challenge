@@ -9,7 +9,7 @@ export class Discount extends Component<DiscountProps> {
   render() {
     const { percentage } = this.props;
 
-    return <div css={container}>{percentage}</div>;
+    return <div css={container}>{'-' + percentage + '%'}</div>;
   }
 }
 

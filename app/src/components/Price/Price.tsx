@@ -4,22 +4,22 @@ import { container } from './styles.js';
 interface PriceProps {
   currentPrice: number;
   discountedPrice: number;
-  currency: string;
+  isFree: boolean;
 }
 
 export class Price extends Component<PriceProps> {
   render() {
-    const { currentPrice, discountedPrice, currency } = this.props;
+    const { currentPrice, discountedPrice, isFree } = this.props;
     return (
       <div css={container}>
-        <div className="discounted-price">
-          {discountedPrice}
-          {currency}
-        </div>
-        <div className="current-price">
-          {currentPrice}
-          {currency}
-        </div>
+        {!isFree ? (
+          <div>
+            {discountedPrice && <div className="discounted-price">{discountedPrice}</div>}
+            <div className="current-price">{currentPrice}</div>
+          </div>
+        ) : (
+          <div>Free to Play</div>
+        )}
       </div>
     );
   }

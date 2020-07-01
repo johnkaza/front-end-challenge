@@ -17,7 +17,7 @@ export const listItemContainer = css`
   position: relative;
 
   ${mq('xs')} {
-    height: 69px;
+    height: 80px;
   }
 
   &:hover {
@@ -30,15 +30,7 @@ export const listItemContainer = css`
 
   .avatar {
     display: inline-block;
-    max-width: 100px;
-
-    ${mq('xxs')} {
-      max-width: 110px;
-    }
-
-    ${mq('sm')} {
-      max-width: 184px;
-    }
+    max-width: 168px;
 
     > img {
       vertical-align: baseline;
@@ -66,10 +58,11 @@ export const listItemContainer = css`
   }
 
   .title {
-    font-size: ${font.size14};
+    font-size: ${font.size15};
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    margin-top: 4px;
   }
 
   .platforms {
@@ -116,10 +109,13 @@ export const listItemContainer = css`
     position: absolute;
     right: 8px;
     top: 26px;
+    text-align: right;
 
     ${mq('sm')} {
+      margin-right: 20px;
       height: 100%;
       position: static;
+      float: right;
     }
   }
 
