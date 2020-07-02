@@ -1,4 +1,4 @@
-export interface GameApp {
+interface GameApp {
   name?: string | undefined;
   appid?: number | undefined;
 }
@@ -34,5 +34,4 @@ export interface GameProps {
 
 export interface StateProps {
   gamesList: Array<GameProps>;
-  init: boolean;
 }

@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import { container, listItemContainer } from './styles';
-import { platformIcons } from '@/images';
+import { gamesListcontainer, gamesListItemContainer } from './styles';
 
-import { Discount, Price } from '@/components';
+import { Discount, Price, Tags } from '@/components';
 import { getGame } from './actions';
-import { GameProps, GamesListProps, StateProps, GameApp } from './types';
+import { GameProps, GamesListProps, StateProps } from './types';
+import Platforms from '@/components/Platforms/Platforms';
 
 export class GamesList extends Component<GamesListProps> {
   state: StateProps = {
     gamesList: [],
-    init: false,
   };
 
   componentDidMount() {
@@ -26,9 +25,16 @@ export class GamesList extends Component<GamesListProps> {
   }
 
   getGamesList = (list: GamesListProps[]) => {
-    list.map((val) => {
-      this.getGame(val?.appid);
-    });
+    this.setState(
+      {
+        gamesList: [],
+      },
+      () => {
+        list.map((val) => {
+          this.getGame(val?.appid);
+        });
+      }
+    );
   };
 
   getGame = async (id: number) => {
@@ -50,29 +56,20 @@ export class GamesList extends Component<GamesListProps> {
     const { gamesList } = this.state;
 
     return (
-      <div css={container}>
+      <div css={gamesListcontainer}>
         {gamesList?.map((val: GameProps, key: number) => {
           return (
-            <div css={listItemContainer} key={key}>
+            <div css={gamesListItemContainer} key={key}>
               <div className="avatar">
                 <img className="img-fluid" src={val.header_image} />
               </div>
               <div className="info">
                 <div className="title">{val.name}</div>
                 <div className="platforms">
-                  {Object.keys(val?.platforms).map((plat: string, key: number) => {
-                    console.log(plat, 'plat');
-                    return key ? <img key={key} src={platformIcons[plat]}></img> : '';
-                  })}
+                  <Platforms platformsList={val?.platforms} />
                 </div>
                 <div className="tags">
-                  {val?.genres?.map((genre: { description: string }, key) => {
-                    return (
-                      <div className="single-tag" key={key}>
-                        {genre.description}
-                      </div>
-                    );
-                  })}
+                  <Tags tagsList={val?.genres} />
                 </div>
               </div>
               {val?.price_overview?.discount_percent > 0 && (

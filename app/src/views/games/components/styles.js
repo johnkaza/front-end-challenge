@@ -4,11 +4,11 @@ import { font } from '@/styles/typography';
 import { rgba } from '@/styles/helpers';
 import { mq } from '@/styles/breakpoints';
 
-export const container = css`
+export const gamesListcontainer = css`
   margin-top: 16px;
 `;
 
-export const listItemContainer = css`
+export const gamesListItemContainer = css`
   color: white;
   background-color: ${rgba(colors.black, 0.2)};
   cursor: pointer;
@@ -87,19 +87,6 @@ export const listItemContainer = css`
     ${mq('sm')} {
       position: static;
       height: 100%;
-    }
-  }
-
-  .tags {
-    font-size: ${font.size12};
-    color: ${colors.oxfordBlue};
-  }
-
-  .single-tag {
-    display: inline-block;
-
-    &:not(:first-of-type) {
-      margin-left: 8px;
     }
   }
 

@@ -58,6 +58,8 @@ class Games extends React.Component {
       val.name.toLowerCase().includes(text)
     );
 
+    console.log(newList, 'newList');
+
     this.setState({
       ...this.state,
       [listName]: newList,
