@@ -2,7 +2,7 @@ import { css } from '@emotion/core';
 import colors from '@/styles/colors';
 import { font } from '@/styles/typography';
 
-export const container = css`
+export const searchContainer = css`
   display: inline-block;
   background-color: ${colors.calypso};
   border-radius: 4px;
