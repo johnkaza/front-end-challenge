@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { container } from './styles.js';
-
-interface SearchProps {
-  onSearch: () => void;
-}
+import { SearchProps } from './types';
 
 export class Search extends Component<SearchProps> {
   render() {

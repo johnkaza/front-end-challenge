@@ -11,7 +11,8 @@ export const container = css`
     bottom: -2px;
   }
 
-  .current-price {
+  .current-price,
+  .free {
     font-size: ${font.size13};
     color: ${colors.regentGray};
   }

@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import { container } from './styles.js';
-
-interface PriceProps {
-  currentPrice: number;
-  discountedPrice: number;
-  isFree: boolean;
-}
+import { PriceProps } from './types';
 
 export class Price extends Component<PriceProps> {
   render() {
@@ -18,7 +13,7 @@ export class Price extends Component<PriceProps> {
             <div className="current-price">{currentPrice}</div>
           </div>
         ) : (
-          <div>Free to Play</div>
+          <div className="free">Free to Play</div>
         )}
       </div>
     );

@@ -104,7 +104,7 @@ export const listItemContainer = css`
   }
 
   .price {
-    margin-left: 40px;
+    margin-left: 24px;
     height: 40px;
     position: absolute;
     right: 8px;

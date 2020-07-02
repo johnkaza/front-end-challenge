@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "sourceMap": true,
-    "noImplicitAny": false,
     "module": "commonjs",
     "moduleResolution": "node",
     "target": "es5",
@@ -9,8 +8,10 @@
     "esModuleInterop": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "noImplicitAny": true,
     "types": ["@emotion/core"],
     "baseUrl": "./",
+    "allowJs": true,
     "paths": {
       "@/*": ["./src/*"],
       "@/components": ["./src/components"],
@@ -20,8 +21,9 @@
       "@/api": ["./src/api"],
       "@/utils": ["./src/utils"]
     },
-    "lib": ["es6", "dom", "esnext"]
+    "lib": ["es6", "dom", "esnext"],
+    "typeRoots": ["./types", "./node_modules/@types"]
   },
   "exclude": ["node_modules", "dist", "webpack"],
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*", "./src/declaration.d.ts"]
 }
