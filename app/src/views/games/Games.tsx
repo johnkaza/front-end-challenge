@@ -41,7 +41,6 @@ class Games extends React.Component<{}, GamesStateProps> {
   getGames = async () => {
     const response = await getGames({ tag: 'RPG' });
     const games = response.data?.applist?.apps;
-    const { activeTab } = this.state;
 
     if (response && games) {
       const indexSplice = 0;
