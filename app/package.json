@@ -4,7 +4,7 @@
   "description": "Assignment for HackTheBox",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack/webpack.dev.js --mode development --open --hot",
+    "start": "webpack-dev-server --config ./webpack/webpack.dev.js --mode development --open --hot --watch --watch-poll",
     "build": "webpack --config ./webpack/webpack.prod.js --mode production"
   },
   "author": "",
@@ -14,6 +14,7 @@
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "@hot-loader/react-dom": "^16.8.6",
+    "@types/react-router-dom": "^5.1.5",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "history": "^5.0.0",
@@ -22,6 +23,7 @@
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-hot-loader": "^4.12.21",
+    "react-query": "^2.4.12",
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {

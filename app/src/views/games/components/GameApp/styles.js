@@ -4,10 +4,6 @@ import { font } from '@/styles/typography';
 import { rgba } from '@/styles/helpers';
 import { mq } from '@/styles/breakpoints';
 
-export const gamesListcontainer = css`
-  margin-top: 16px;
-`;
-
 export const gamesListItemContainer = css`
   color: white;
   background-color: ${rgba(colors.black, 0.2)};

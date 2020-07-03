@@ -41,11 +41,8 @@ export interface defaultValuesProps {
   upComing: Array<GameProps>;
 }
 export interface GamesStateProps {
-  readonly tabGames: tabGamesProps;
-  defaultValues: defaultValuesProps;
-  topSellers: Array<GameProps>;
-  newTrending: Array<GameProps>;
-  beingPlayed: Array<GameProps>;
-  upComing: Array<GameProps>;
-  activeTab: string;
+  topSellers: Array<tabGamesProps>;
+  newTrending: Array<tabGamesProps>;
+  beingPlayed: Array<tabGamesProps>;
+  upComing: Array<tabGamesProps>;
 }

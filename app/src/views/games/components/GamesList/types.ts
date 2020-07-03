@@ -1,4 +1,4 @@
-import { GameProps as GP } from '../types';
+import { GamesListItemProp as GP } from '../../types';
 
 interface GameProps extends GP {}
 
