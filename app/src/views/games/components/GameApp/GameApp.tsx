@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from 'react-query';
 
 import { Discount, Price, Tags, Platforms } from '@/components';
-import { gamesListItemContainer } from './styles';
+import { gameAppContainer, unAvailableContainer } from './styles';
 import { getGame } from './actions';
 
 const GameApp: React.FC<{ appId: number }> = ({ appId }) => {
@@ -16,7 +16,7 @@ const GameApp: React.FC<{ appId: number }> = ({ appId }) => {
   });
 
   return (
-    <div css={gamesListItemContainer}>
+    <div css={gameAppContainer}>
       {data ? (
         <>
           <div className="avatar">
@@ -45,7 +45,7 @@ const GameApp: React.FC<{ appId: number }> = ({ appId }) => {
           </div>
         </>
       ) : (
-        <div>Game not found</div>
+        <div css={unAvailableContainer}>Game currently unavailable</div>
       )}
     </div>
   );

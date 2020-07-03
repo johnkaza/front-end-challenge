@@ -4,7 +4,7 @@ import { font } from '@/styles/typography';
 import { rgba } from '@/styles/helpers';
 import { mq } from '@/styles/breakpoints';
 
-export const gamesListItemContainer = css`
+export const gameAppContainer = css`
   color: white;
   background-color: ${rgba(colors.black, 0.2)};
   cursor: pointer;
@@ -109,4 +109,11 @@ export const gamesListItemContainer = css`
     display: inline-block;
     vertical-align: top;
   }
+`;
+
+export const unAvailableContainer = css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 `;
