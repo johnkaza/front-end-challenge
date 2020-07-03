@@ -117,3 +117,14 @@ export const unAvailableContainer = css`
   align-items: center;
   height: 100%;
 `;
+
+export const loadingContainer = css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+`;
+
+export const loaderContainer = css`
+  color: ${rgba(colors.black, 0.4)};
+`;

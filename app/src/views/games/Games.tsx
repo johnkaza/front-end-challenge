@@ -31,7 +31,7 @@ const Games: React.FC<GamesStateProps> = () => {
     }, {});
   };
 
-  const { data, isSuccess } = useQuery('games', async () => {
+  const { data, isSuccess, isFetching } = useQuery('games', async () => {
     const response = await getGames();
     const games = response.data?.applist?.apps;
 
@@ -59,6 +59,8 @@ const Games: React.FC<GamesStateProps> = () => {
     searchGames(listName, event);
   };
 
+  console.log(isFetching, 'isFetching');
+
   return (
     <App>
       <Container>
@@ -70,28 +72,44 @@ const Games: React.FC<GamesStateProps> = () => {
             defaultActiveKey={'newTrending'}
           >
             <Tab eventKey="newTrending" title="New and Trending">
-              <div css={searchContainer}>
-                <Search onSearch={(text) => search('newTrending', text)} />
-              </div>
-              {isSuccess && <GamesList list={state['newTrending']} />}
+              {isSuccess && !isFetching && (
+                <>
+                  <div css={searchContainer}>
+                    <Search onSearch={(text) => search('newTrending', text)} />
+                  </div>
+                  <GamesList list={state['newTrending']} />
+                </>
+              )}
             </Tab>
             <Tab eventKey="topSellers" title="Top Sellers">
-              <div css={searchContainer}>
-                <Search onSearch={(text) => search('topSellers', text)} />
-              </div>
-              {isSuccess && <GamesList list={state['topSellers']} />}
+              {isSuccess && (
+                <>
+                  <div css={searchContainer}>
+                    <Search onSearch={(text) => search('topSellers', text)} />
+                  </div>
+                  <GamesList list={state['topSellers']} />{' '}
+                </>
+              )}
             </Tab>
             <Tab eventKey="beingPlayed" title="What's Being Played">
-              <div css={searchContainer}>
-                <Search onSearch={(text) => search('beingPlayed', text)} />
-              </div>
-              {isSuccess && <GamesList list={state['beingPlayed']} />}
+              {isSuccess && (
+                <>
+                  <div css={searchContainer}>
+                    <Search onSearch={(text) => search('beingPlayed', text)} />
+                  </div>
+                  <GamesList list={state['beingPlayed']} />
+                </>
+              )}
             </Tab>
             <Tab eventKey="upComing" title="Upcoming">
-              <div css={searchContainer}>
-                <Search onSearch={(text) => search('upComing', text)} />
-              </div>
-              {isSuccess && <GamesList list={state['upComing']} />}
+              {isSuccess && (
+                <>
+                  <div css={searchContainer}>
+                    <Search onSearch={(text) => search('upComing', text)} />
+                  </div>
+                  <GamesList list={state['upComing']} />
+                </>
+              )}
             </Tab>
           </Tabs>
         </div>

@@ -9,7 +9,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    port: 3000,
+    port: 8080,
     contentBase: path.join(__dirname, './'),
     publicPath: '/',
     hot: true,
@@ -69,9 +69,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './public/index.html',
       filename: 'index.html',
-      title: 'Learning Webpack',
+      favicon: './public/favicon.ico',
     }),
     new ExtractTextPlugin({ filename: 'css/style.css' }),
   ],

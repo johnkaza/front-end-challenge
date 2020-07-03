@@ -62,9 +62,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './public/index.html',
       filename: 'index.html',
-      title: 'Learning Webpack',
+      favicon: './public/favicon.ico',
     }),
     new ExtractTextPlugin({ filename: 'css/style.css' }),
   ],

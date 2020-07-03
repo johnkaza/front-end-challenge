@@ -1,12 +1,13 @@
 import React from 'react';
 import { useQuery } from 'react-query';
+import Loader from 'react-loader-spinner';
 
 import { Discount, Price, Tags, Platforms } from '@/components';
-import { gameAppContainer, unAvailableContainer } from './styles';
+import { gameAppContainer, unAvailableContainer, loadingContainer } from './styles';
 import { getGame } from './actions';
 
 const GameApp: React.FC<{ appId: number }> = ({ appId }) => {
-  const { data } = useQuery(`app-${appId}`, async () => {
+  const { data, isFetching } = useQuery(`app-${appId}`, async () => {
     const response = await getGame({ appids: appId });
 
     const firstKey = Object.keys(response.data)[0];
@@ -17,7 +18,11 @@ const GameApp: React.FC<{ appId: number }> = ({ appId }) => {
 
   return (
     <div css={gameAppContainer}>
-      {data ? (
+      {isFetching ? (
+        <div css={loadingContainer}>
+          <Loader color="cadetblue" type="Oval" height={40} width={40} timeout={3000} />
+        </div>
+      ) : data ? (
         <>
           <div className="avatar">
             <img className="img-fluid" src={data?.header_image} />
