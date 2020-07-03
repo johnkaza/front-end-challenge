@@ -59,8 +59,6 @@ const Games: React.FC<GamesStateProps> = () => {
     searchGames(listName, event);
   };
 
-  console.log(isFetching, 'isFetching');
-
   return (
     <App>
       <Container>
