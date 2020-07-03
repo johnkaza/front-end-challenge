@@ -10,8 +10,9 @@
     "noUnusedParameters": true,
     "noImplicitAny": true,
     "types": ["@emotion/core"],
-    "baseUrl": "./",
     "allowJs": true,
+    "downlevelIteration": true,
+    "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
       "@/components": ["./src/components"],
