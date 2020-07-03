@@ -20,7 +20,7 @@ const GameApp: React.FC<{ appId: number }> = ({ appId }) => {
     <div css={gameAppContainer}>
       {isFetching ? (
         <div css={loadingContainer}>
-          <Loader color="cadetblue" type="Oval" height={40} width={40} timeout={3000} />
+          <Loader color="cadetblue" type="Oval" height={40} width={40} />
         </div>
       ) : data ? (
         <>
