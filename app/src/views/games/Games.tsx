@@ -32,7 +32,7 @@ const Games: React.FC<GamesStateProps> = () => {
   };
 
   const { data, isSuccess } = useQuery('games', async () => {
-    const response = await getGames({ tag: 'RPG' });
+    const response = await getGames();
     const games = response.data?.applist?.apps;
 
     const tabGames = chunkPerCategory(games);
