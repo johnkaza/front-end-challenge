@@ -70,7 +70,7 @@ const Games: React.FC<GamesStateProps> = () => {
             defaultActiveKey={'newTrending'}
           >
             <Tab eventKey="newTrending" title="New and Trending">
-              {isSuccess && !isFetching && (
+              {isSuccess && (
                 <>
                   <div css={searchContainer}>
                     <Search onSearch={(text) => search('newTrending', text)} />
