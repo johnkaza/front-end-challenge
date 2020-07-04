@@ -5,7 +5,7 @@ export default {
   queries: {
     enabled: true,
     retry: false,
-    cacheTime: 0,
+    cacheTime: 3000,
     refetchOnWindowFocus: false,
     refetchOnMount: false,
   },
