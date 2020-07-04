@@ -6,7 +6,9 @@ const Platforms: React.FC<PlatformsProps> = ({ platformsList }) => {
   return (
     <>
       {Object.keys(platformsList)?.map((plat: string, key: number) => {
-        return platformsList[plat] ? <img key={key} src={platformIcons[plat]}></img> : '';
+        return (
+          platformsList[plat] && <img className={plat} key={key} src={platformIcons[plat]}></img>
+        );
       })}
     </>
   );
