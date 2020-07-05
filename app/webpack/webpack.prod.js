@@ -69,10 +69,7 @@ module.exports = {
     }),
     new ExtractTextPlugin({ filename: 'css/style.css' }),
     new CopyPlugin({
-      patterns: [
-        { from: './public/.htaccess', to: './' },
-        { from: './public/_redirects', to: './' },
-      ],
+      patterns: [{ from: './public/.htaccess', to: './' }],
     }),
   ],
 };
