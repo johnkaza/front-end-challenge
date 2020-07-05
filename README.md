@@ -1,12 +1,16 @@
 ## Description
 
-Created with
+Custom React Webpack implementation with typescript and React Boostrap for CSS framework and React Query for caching data and for tests I used Jest and Enzyme.
 
 ### Packages
 
 - Webpack 4
+- React
 - React Bootstrap
-- Jest
+- React Query (caching)
+- Jest - Enzyme
+- Typescript
+- Axios
 
 ## Installation
 
